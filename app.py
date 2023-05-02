@@ -3,6 +3,8 @@ from books import BookList
 from loans import LoanList
 import json
 
+print("hello Adam")
+
 book_list = BookList()
 all_customers = CustomerList()
 loan_list = LoanList()
@@ -15,6 +17,7 @@ look for my comments in ###
 Ran
 
 """
+
 
 def display_menu():
     print("""
@@ -33,6 +36,7 @@ def display_menu():
 0. Exit
 """)
 
+
 def add_customer():
     name = input("Enter customer name: ")
     city = input("Enter customer city: ")
@@ -40,8 +44,10 @@ def add_customer():
     customer = all_customers.add_customer(name, city, age)
     print("Customer added with id:", customer.customer_id)
 
+
 def display_customers():
     all_customers.display_customers()
+
 
 def find_customer_by_name():
     name = input("Enter customer name: ")
@@ -54,6 +60,7 @@ def find_customer_by_name():
     else:
         for customer in found_customers:
             print(customer)
+
 
 def remove_customer():
     customer_id = int(input("Enter customer id: "))
@@ -82,16 +89,19 @@ def remove_book():
     book_id = int(input("Enter book id: "))
     book_list.remove_book(book_id)
 
+
 def loan_book():
     customer_id = int(input("Enter customer id: "))
     book_id = int(input("Enter book id: "))
     loan = loan_list.loan_book(customer_id, book_id)
-    print(f"Book with id {book_id} has been loaned to customer with id {customer_id} with loan id {loan.loan_id}")
+    print(
+        f"Book with id {book_id} has been loaned to customer with id {customer_id} with loan id {loan.loan_id}")
 
 
 def return_book():
     loan_id = int(input("Enter loan id: "))
     loan_list.return_book(loan_id)
+
 
 def display_loans():
     loan_list.display_loans()
