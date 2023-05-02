@@ -4,6 +4,8 @@ from loans import LoanList
 import json
 
 print("hello Adam")
+print("hello Rita")
+print("hello Ran")
 
 book_list = BookList()
 all_customers = CustomerList()
