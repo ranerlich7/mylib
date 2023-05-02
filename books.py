@@ -11,6 +11,7 @@ class Book:
         self.author = author
         self.year_published = year_published
         self.book_type = book_type
+        self.gpt = "my_gpt"
 
     def print(self):  # better use __str__
         print(
