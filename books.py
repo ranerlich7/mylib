@@ -36,6 +36,7 @@ class BookList:
     def __init__(self):
         self.load_from_json()
         print("init")
+        print("after init")
 
     def add_book(self, name, author, year_published, book_type):
         if len(self.all_books) == 0:
@@ -53,6 +54,7 @@ class BookList:
             book.print()
 
     def find_book_by_name(self, name):
+        print("finding")
         found_books = [
             book for book in self.all_books if book.name.lower() == name.lower()]
         if len(found_books) == 0:
